@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新知段96地號 廠辦大樓 - 各戶單元平面配置圖說系統</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Serif+TC:wght@300;400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/floorplan.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <span class="brand-badge">MINZUE</span>
+    <span>新莊新知段96地號 建築執照圖說分析</span>
+  </div>
+  <div class="header-meta">
+    基地面積 1,512.50 坪 ｜ 蔣伯彥建築師事務所
+  </div>
+</header>
+
+<div class="main-container">
+  <nav class="floor-sidebar" id="floorNav">
+    <button class="floor-btn" onclick="switchFloor('RF')">RF</button>
+    <button class="floor-btn" onclick="switchFloor('9F')">9F</button>
+    <button class="floor-btn" onclick="switchFloor('9F_MEZZ')">夾層</button>
+    <button class="floor-btn" onclick="switchFloor('8F')">8F</button>
+    <button class="floor-btn" onclick="switchFloor('7F')">7F</button>
+    <button class="floor-btn" onclick="switchFloor('6F')">6F</button>
+    <button class="floor-btn" onclick="switchFloor('5F')">5F</button>
+    <button class="floor-btn" onclick="switchFloor('4F')">4F</button>
+    <button class="floor-btn" onclick="switchFloor('3F')">3F</button>
+    <button class="floor-btn" onclick="switchFloor('2F')">2F</button>
+    <button class="floor-btn active" onclick="switchFloor('1F')">1F</button>
+    <button class="floor-btn" onclick="switchFloor('B1F')">B1F</button>
+    <button class="floor-btn" onclick="switchFloor('B2F')">B2F</button>
+    <button class="floor-btn" onclick="switchFloor('B3F')">B3F</button>
+  </nav>
+
+  <main class="viewport">
+    <div class="cad-sheet">
+      <div class="sheet-header">
+        <div class="sheet-header-left">
+          <div class="floor-badge-circle" id="circleBadge">1F</div>
+          <div class="sheet-title-box">
+            <h2 id="sheetTitle">平面配置圖</h2>
+            <p>※ 此室內格局及坪數均依建照申請圖說面積計算表製作，點選各戶單元可檢視明細拆解。</p>
+          </div>
+        </div>
+        <div class="north-arrow">▲<br>N</div>
+      </div>
+      <svg id="planSvg" viewBox="0 0 820 420"></svg>
+    </div>
+  </main>
+
+  <button class="panel-toggle-btn" id="toggleBtn" onclick="toggleRightPanel()">
+    功能標籤 ◀
+  </button>
+
+  <aside class="right-panel" id="rightPanel">
+    <div class="tab-header">
+      <button class="tab-btn active" onclick="setTab('unitTab', event)">戶別/車位詳情</button>
+      <button class="tab-btn" onclick="setTab('floorTab', event)">當層法規檢討</button>
+      <button class="tab-btn" onclick="setTab('projTab', event)">全案面積統計</button>
+    </div>
+
+    <div class="tab-content" id="unitTab">
+      <div class="unit-card">
+        <span class="unit-tag" id="uTag">專屬單元</span>
+        <div class="unit-title" id="uName">S1 戶 (一般零售)</div>
+        <div class="area-box">
+          <span class="area-main" id="uPing">31.63</span>
+          <span style="color:var(--text-muted); font-size:0.85rem;">坪 (<span id="uSqm">104.56</span> m²)</span>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <h4>📐 面積組成明細拆解</h4>
+        <ul class="data-table">
+          <li class="data-row"><span>專有主建物(室內)</span><span id="uInner">104.56 m² (31.63坪)</span></li>
+          <li class="data-row"><span>附屬陽台/露台</span><span id="uBal">9.70 m² (2.93坪)</span></li>
+          <li class="data-row"><span>單元主要用途</span><span id="uUsage">G3 一般零售業</span></li>
+          <li class="data-row"><span>容積檢討狀態</span><span id="uVolStatus">計入容積樓地板</span></li>
+        </ul>
+      </div>
+
+      <div class="info-box">
+        <h4>🏢 單元特點與樓層機能</h4>
+        <p id="uDesc">臨福慧路15米計畫道路，方正單元且附設完整防火防煙區劃，出入口可直通避難層戶外梯與安全梯核。</p>
+      </div>
+    </div>
+
+    <div class="tab-content" id="floorTab" style="display:none;">
+      <div class="info-box">
+        <h4>📋 當層建照法規數據 (A0-02)</h4>
+        <ul class="data-table" style="margin-top:8px;">
+          <li class="data-row"><span>當層總樓地板面積</span><span id="flTotal">2,144.75 m²</span></li>
+          <li class="data-row"><span>計入容積樓地板</span><span id="flVol">1,360.92 m²</span></li>
+          <li class="data-row"><span>陽台免計容積(10%)</span><span id="flBal">214.48 m² OK</span></li>
+          <li class="data-row"><span>層高檢討</span><span id="flHeight">5.80 M (淨高>2.7M OK)</span></li>
+          <li class="data-row"><span>戶數編排</span><span id="flUnits">27 戶</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tab-content" id="projTab" style="display:none;">
+      <div class="info-box">
+        <h4>🏗️ 新知段96地號 總體指標</h4>
+        <ul class="data-table" style="margin-top:8px;">
+          <li class="data-row"><span>基地面積</span><span>5,000.00 m² (1,512.50坪)</span></li>
+          <li class="data-row"><span>總樓地板面積</span><span>30,693.73 m²</span></li>
+          <li class="data-row"><span>實設容積率</span><span>305.74% (上限306% OK)</span></li>
+          <li class="data-row"><span>汽車停車位</span><span>276 位 (坡道平面獨立產權)</span></li>
+          <li class="data-row"><span>機車停車位</span><span>261 位</span></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<script src="js/floorplan-data.js"></script>
+<script src="js/floorplan.js"></script>
+</body>
+</html>

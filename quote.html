@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>明水新創 II ｜ 房屋報價單</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Noto+Serif+TC:wght@300;400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/quote.css">
+</head>
+<body>
+
+  <div class="quote-container">
+    <div class="header">
+      <div class="brand-badge">MINZUE</div>
+      <h1>明水開發股份有限公司</h1>
+      <div class="corp-sub">THE MINZUE CORPORATE CAMPUS</div>
+      <p class="welcome-text">感謝您選擇「<strong>明水新創 II</strong>」，我們非常榮幸能為您服務！</p>
+    </div>
+
+    <table>
+      <tr>
+        <td class="label-col">戶 別</td>
+        <td class="text-left" colspan="3">
+          <input type="text" class="inline-input" style="width: 120px;" placeholder="請輸入"> 棟
+          <input type="text" class="inline-input" style="width: 90px; margin-left: 20px;" placeholder="請輸入"> 樓
+          <input type="text" class="inline-input" style="width: 90px; margin-left: 20px;" placeholder="請輸入"> 戶
+        </td>
+      </tr>
+      <tr>
+        <td class="label-col">車 位</td>
+        <td class="text-left" colspan="3">
+          <div class="parking-row">
+            <input type="text" class="inline-input parking-input" placeholder="請輸入車位編號（如：B1-102、B2-205 等）">
+            <span class="parking-label">號（坡道平面）</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="label-col">坪 數</td>
+        <td class="text-left" style="width: 42%;">
+          房屋坪數：<input type="text" class="inline-input" style="width: 110px;" placeholder="0.00"> 坪
+        </td>
+        <td class="text-left" colspan="2">
+          車位坪數：<input type="text" class="inline-input" style="width: 110px;" placeholder="0.00"> 坪
+        </td>
+      </tr>
+    </table>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 34%;">款項項目</th>
+          <th style="width: 33%;">預估金額 (NT$)</th>
+          <th style="width: 33%;">付款日期</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>訂金</td>
+          <td><input type="number" class="table-input calc-item" placeholder="0"></td>
+          <td><input type="date" class="table-input" style="text-align: center;"></td>
+        </tr>
+        <tr>
+          <td>簽約金</td>
+          <td><input type="number" class="table-input calc-item" placeholder="0"></td>
+          <td><input type="date" class="table-input" style="text-align: center;"></td>
+        </tr>
+        <tr>
+          <td>開工款</td>
+          <td><input type="number" class="table-input calc-item" placeholder="0"></td>
+          <td><input type="date" class="table-input" style="text-align: center;"></td>
+        </tr>
+        <tr>
+          <td>工程期款</td>
+          <td><input type="number" class="table-input calc-item" placeholder="0"></td>
+          <td><input type="date" class="table-input" style="text-align: center;"></td>
+        </tr>
+        <tr>
+          <td>使照申請</td>
+          <td><input type="number" class="table-input calc-item" placeholder="0"></td>
+          <td><input type="date" class="table-input" style="text-align: center;"></td>
+        </tr>
+        <tr>
+          <td>銀行貸款</td>
+          <td><input type="number" class="table-input calc-item" placeholder="0"></td>
+          <td><input type="date" class="table-input" style="text-align: center;"></td>
+        </tr>
+        <tr>
+          <td>交屋款</td>
+          <td><input type="number" class="table-input calc-item" placeholder="0"></td>
+          <td><input type="date" class="table-input" style="text-align: center;"></td>
+        </tr>
+        <tr class="bg-highlight">
+          <td style="font-weight: 600; color: #0f172a;">房屋總價</td>
+          <td><input type="number" id="house-total" class="table-input" style="font-weight: 700; color: #ab8657;" readonly placeholder="0"></td>
+          <td></td>
+        </tr>
+        <tr class="bg-highlight">
+          <td style="font-weight: 600; color: #0f172a;">房屋含車位總價合計</td>
+          <td colspan="2"><input type="number" id="grand-total" class="table-input" style="font-weight: 700; color: #ab8657; font-size: 16px;" placeholder="0"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="legal-notice">
+      依『洗錢防制法』、『地政士及不動產經紀業防制洗錢辦法』等規定，簽約時，針對現金支付之買方應進行辨識、評估及管理，為遵循此確認及義務，應填寫防治洗錢聲明書，感謝您的協助與配合。
+    </div>
+
+    <div class="brand-section">
+      <div class="brand-logo">
+        <div class="logo-title">明水新創 II</div>
+        <div class="logo-en">MINZUE INNOVATION II</div>
+      </div>
+      <div class="brand-slogan">新五科技走廊 ‧ 強強結盟</div>
+    </div>
+
+    <table>
+      <tr>
+        <td class="label-col" style="width: 18%;">接待人員</td>
+        <td style="width: 32%;"><input type="text" class="table-input" style="text-align: left;" placeholder="請填寫姓名"></td>
+        <td class="label-col" style="width: 18%;">手 機</td>
+        <td style="width: 32%;"><input type="text" class="table-input" style="text-align: left;" placeholder="09xx-xxx-xxx"></td>
+      </tr>
+      <tr>
+        <td class="label-col">日 期</td>
+        <td><input type="date" id="today-date" class="table-input" style="text-align: center;"></td>
+        <td class="label-col">電 話</td>
+        <td><input type="text" class="table-input" style="text-align: left;" placeholder="02-xxxx-xxxx"></td>
+      </tr>
+    </table>
+
+    <div class="btn-container">
+      <button class="action-btn" onclick="window.print()">列印 / 匯出 PDF 報價單</button>
+    </div>
+  </div>
+
+  <script src="js/quote.js"></script>
+</body>
+</html>
