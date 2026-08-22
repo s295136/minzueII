@@ -1,0 +1,358 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #222222;
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 20px 10px;
+}
+
+.quote-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 860px;
+  padding: 40px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.brand-badge {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ab8657, #684a22);
+  padding: 3px 12px;
+  border-radius: 4px;
+  letter-spacing: 0.12em;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 12px;
+}
+
+.header h1 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.header .corp-sub {
+  font-family: 'Cinzel', serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  color: #ab8657;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.header .welcome-text {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 15px;
+  color: #475569;
+  letter-spacing: 0.05em;
+}
+
+.header .welcome-text strong {
+  color: #ab8657;
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #cbd5e1;
+  padding: 9px 14px;
+  font-size: 14px;
+  color: #334155;
+  text-align: center;
+  vertical-align: middle;
+}
+
+th {
+  font-family: 'Noto Serif TC', serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.label-col {
+  width: 18%;
+  font-family: 'Noto Serif TC', serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.bg-highlight {
+  background-color: #fdfbf8;
+  font-weight: 600;
+}
+
+.text-left {
+  text-align: left;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #0f172a;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.inline-input {
+  border-bottom: 1px solid #94a3b8 !important;
+  text-align: center;
+  color: #0f172a;
+  font-weight: 500;
+  padding: 2px 4px;
+}
+
+.inline-input:focus {
+  border-bottom-color: #ab8657 !important;
+}
+
+.table-input {
+  width: 100%;
+  text-align: right;
+  padding: 4px 8px;
+}
+
+.table-input:focus {
+  background: #f8fafc;
+}
+
+.parking-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.parking-input {
+  flex: 1;
+  margin-right: 15px;
+  text-align: left !important;
+  padding-left: 6px;
+}
+
+.parking-label {
+  white-space: nowrap;
+  color: #334155;
+}
+
+.legal-notice {
+  font-size: 12.5px;
+  line-height: 1.8;
+  color: #64748b;
+  margin: 16px 0 22px 0;
+  text-align: justify;
+  background: #f8fafc;
+  padding: 12px 18px;
+  border-left: 4px solid #ab8657;
+  border-radius: 0 4px 4px 0;
+}
+
+.brand-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin: 24px 0;
+  padding: 16px;
+  background: #fdfbf8;
+  border: 1px solid #eee5d8;
+  border-radius: 6px;
+}
+
+.brand-logo {
+  text-align: center;
+  padding-right: 24px;
+  border-right: 2px solid #ab8657;
+}
+
+.brand-logo .logo-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: 0.15em;
+}
+
+.brand-logo .logo-en {
+  font-family: 'Cinzel', serif;
+  font-size: 9.5px;
+  color: #ab8657;
+  letter-spacing: 0.2em;
+}
+
+.brand-slogan {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #ab8657;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 15px;
+}
+
+.action-btn {
+  background: #ab8657;
+  color: #ffffff;
+  border: 1px solid #ab8657;
+  padding: 11px 32px;
+  font-size: 15px;
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(171, 134, 87, 0.25);
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background: #947144;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(171, 134, 87, 0.35);
+}
+
+@page {
+  size: A4 portrait;
+  margin: 12mm 15mm;
+}
+
+@media print {
+  body {
+    background: transparent !important;
+    padding: 0 !important;
+  }
+
+  .quote-container {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .header {
+    margin-bottom: 18px !important;
+    padding-bottom: 14px !important;
+  }
+
+  .header h1 {
+    font-size: 22px !important;
+  }
+
+  .header .welcome-text {
+    font-size: 13px !important;
+  }
+
+  table {
+    margin-bottom: 14px !important;
+    border-color: #4a4a4a !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  th, td {
+    padding: 7px 10px !important;
+    font-size: 13px !important;
+    border-color: #4a4a4a !important;
+  }
+
+  th, .label-col {
+    background-color: #f1f5f9 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .bg-highlight {
+    background-color: #f8fafc !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .brand-badge {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  input[type="text"], input[type="number"], input[type="date"] {
+    font-size: 13px !important;
+    color: #000000 !important;
+  }
+
+  .inline-input {
+    border-bottom: 1px solid #4a4a4a !important;
+  }
+
+  .legal-notice {
+    margin: 12px 0 16px 0 !important;
+    padding: 10px 14px !important;
+    font-size: 11px !important;
+    line-height: 1.6 !important;
+    border-left: 4px solid #ab8657 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .brand-section {
+    margin: 14px 0 !important;
+    padding: 12px 14px !important;
+    border: 1px solid #eee5d8 !important;
+    background: #fdfbf8 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .brand-logo .logo-title {
+    font-size: 20px !important;
+  }
+
+  .brand-slogan {
+    font-size: 16px !important;
+  }
+
+  .btn-container {
+    display: none !important;
+  }
+}
